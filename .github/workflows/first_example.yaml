@@ -14,8 +14,8 @@ jobs:
                 echo "hello world"
                 ls -ltra
                 cat Readme.md
-            - name: Generate Artwork
-              run: cowsay -f dragon "Run for cover , I am a DRAGON....RAWR" >> dragon.txt
+            # - name: Generate Artwork
+            #   run: cowsay -f dragon "Run for cover , I am a DRAGON....RAWR" >> dragon.txt
 
             # - name: List of all files
             #   run: ls

@@ -1,0 +1,10 @@
+name: hello
+
+on: push
+
+jobs:
+    hello_job:
+        runs-on: macos-12
+        steps:
+            - name: Say Hello
+              run: echo "hello world"
