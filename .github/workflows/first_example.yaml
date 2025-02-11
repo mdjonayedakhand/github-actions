@@ -16,10 +16,19 @@ jobs:
                 cat Readme.md
                 chmod +x hell.sh
                 ./hell.sh
-            # - name: Generate Artwork
-            #   run: cowsay -f dragon "Run for cover , I am a DRAGON....RAWR" >> dragon.txt
-
-            # - name: List of all files
-            #   run: ls
-            # - name: print the readme file
-            #   run: cat Readme.md
+    second_job:
+        needs: first_job
+        runs-on: ubuntu-latest
+        steps:
+          - name: demo
+            run: echo "second_job"
+       
+    third_job:
+        needs: second_job
+        runs-on: ubuntu-latest
+        steps:
+          - name: demo
+            run: echo "third_job"
+        
+        
+        
