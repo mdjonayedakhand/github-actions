@@ -8,9 +8,16 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
+
             - name: welcome workflow
-              run: echo "hello world"
-            - name: List of all files
-              run: ls
-            - name: print the readme file
-              run: cat Readme.md
+              run: |
+                echo "hello world"
+                ls -ltra
+                cat Readme.md
+            - name: Generate Artwork
+              run: cowsay -f dragon "Run for cover , I am a DRAGON....RAWR" >> dragon.txt
+
+            # - name: List of all files
+            #   run: ls
+            # - name: print the readme file
+            #   run: cat Readme.md
